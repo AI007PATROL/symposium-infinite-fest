@@ -1,0 +1,304 @@
+/* ===========================
+   INFINITE TECHFEST’25 THEME
+   Science & Humanities Dept.
+   =========================== */
+
+:root {
+  --bg: #ffffff;
+  --card: #f9fafb;
+  --muted: #6b7280;
+  --accent: #facc15; /* gold */
+  --primary: #1e3a8a; /* professional navy blue */
+  --glass: rgba(0, 0, 0, 0.02);
+  --container: 1100px;
+  --transition: all 0.3s ease-in-out;
+}
+
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, #ffffff 0%, #f3f4f6 100%);
+  color: #111827;
+  font-family: "Inter", "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout Container */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ---------------- HEADER ---------------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: var(--primary);
+  color: #fff;
+  border-bottom: 2px solid var(--accent);
+  z-index: 10;
+  padding: 10px 0;
+  min-height: 54px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 16px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.brand span {
+  color: var(--accent);
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: var(--transition);
+}
+
+.nav a.active,
+.nav a:hover {
+  background: var(--accent);
+  color: #111827;
+  font-weight: 600;
+}
+
+/* ---------------- HERO ---------------- */
+.hero {
+  position: relative;
+  height: 85vh;
+  background: url("../assets/infinite_banner.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 0 0 12px 12px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.4));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  padding: 20px;
+  animation: fadeUp 1.2s ease-in-out;
+}
+
+.hero-content h1 {
+  margin: 0 0 16px;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--accent);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+  margin: 0 0 28px;
+  font-size: 18px;
+  color: #f3f4f6;
+}
+
+.hero-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: var(--accent);
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.2);
+}
+
+.btn.primary:hover {
+  background: var(--accent);
+  color: #111827;
+}
+
+.btn.ghost {
+  border: 1px solid #d1d5db;
+  color: var(--accent);
+  background: transparent;
+}
+
+.btn.ghost:hover {
+  background: var(--accent);
+  color: #111827;
+}
+
+/* ---------------- HIGHLIGHTS ---------------- */
+.highlights {
+  display: flex;
+  gap: 18px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--accent);
+}
+
+/* ---------------- EVENTS GRID ---------------- */
+.events-grid .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.event-card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.event-card h3 {
+  margin: 0 0 6px;
+  color: var(--accent);
+}
+
+.event-card .date {
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+/* ---------------- CONTACT ---------------- */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.contact-card {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* ---------------- FOOTER ---------------- */
+.site-footer {
+  background: var(--primary);
+  color: #fff;
+  padding: 18px 0;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+  border-top: 2px solid var(--accent);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 800px) {
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .highlights {
+    flex-direction: column;
+  }
+
+  .header-inner {
+    flex-direction: column;
+  }
+
+  .nav {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    font-size: 14px;
+  }
+}
